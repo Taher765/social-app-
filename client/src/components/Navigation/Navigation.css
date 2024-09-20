@@ -1,0 +1,17 @@
+a {
+  position: relative;
+}
+a:after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: rgba(0, 94, 255, 0.85);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: 0.3s;
+}
+
+a.active:after {
+  width: 50%;
+}

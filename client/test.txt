@@ -1,0 +1,49 @@
+حاجه مبدأيه لفهم الباك اند وبعد كدا هعمل ملف ريدمي 
+baseUrl = http://localhost:8000/api
+
+===> Routs 
+============= post Register ============
+
+name 
+email
+password
+secret
+================ post login ============
+ 
+email
+password
+ =============== get current-user =======
+ //  التأكد من اليوزر عن طريق التوكين حركه تأمين يعني  
+headers => "Authorization": Bearer token 
+
+========= post forogt-password ===========
+email: "",
+newPassword: "",
+secret: ""
+=========== post create-post ==========
+body {
+content : "", لو اتبعت لوحده تمام 
+image: { // دا جي من الريكوست اللي تحت بتاع الابلود
+  url,
+  id,
+}
+
+},
+headers: {
+Authraization: Bearer token
+}
+
+=========== هنا عشان المشروع كله فري هنعمل اتنين ريكوست مع انه في العادي مفروض واحد ف احنا هنرفع الصوره علي كلاودنري في ريكوست والتاني هنعمل بوست جديد باللينك اللي هيرجع من الريكوست الاول 
+
+===========  post upload-post => formData ======
+
+formData => file
+headers: {
+Authraization: Bearer token
+}
+
+////الريكوست دا بيرج نصوص عشان كدا بنبع اللي فوق جاسون عادي ش فورم داتا
+
+
+============== get user-post ==========
+Fetch single user posts => limit(10)
